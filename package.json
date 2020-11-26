@@ -1,0 +1,18 @@
+{
+    "name": "init-server",
+    "version": "1.0.0",
+    "description": "",
+    "bin": {
+        "notshekhar/init-server": "bin/init-server",
+        "init-server": "bin/init-server"
+    },
+    "main": "src/index.js",
+    "author": "notshekhar",
+    "license": "ISC",
+    "dependencies": {
+        "chalk": "^4.1.0",
+        "esm": "^3.2.25",
+        "inquirer": "^7.3.3",
+        "ncp": "^2.0.0"
+    }
+}
