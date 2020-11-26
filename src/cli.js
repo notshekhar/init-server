@@ -2,6 +2,8 @@ import fs from "fs"
 import ncp from "ncp"
 import path from "path"
 import { promisify } from "util"
+import { exec } from "child_process"
+import { execArgv } from "process"
 
 const access = promisify(fs.access)
 const copy = promisify(ncp)
@@ -19,6 +21,16 @@ export async function cli(args) {
         console.log("Creating project ....")
         // console.log(targetDir, templateDir)
         await copy(templateDir, targetDir)
+        exec("cd " + project_name, (err, out, outerr) => {
+            if (err) console.log(err)
+            else if (outerr) console.log(outerr)
+            else console.log(out)
+        })
+        exec("npm i", (err, out, outerr) => {
+            if (err) console.log(err)
+            else if (outerr) console.log(outerr)
+            else console.log(out)
+        })
         console.log("Done, now run:")
         console.log(`    'cd ${project_name}'`)
         console.log(`    'node server'`)

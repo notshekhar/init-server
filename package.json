@@ -1,16 +1,15 @@
 {
-    "name": "init-server",
+    "name": "init-express",
     "version": "1.0.0",
     "description": "",
     "bin": {
-        "notshekhar/init-server": "bin/init-server",
-        "init-server": "bin/init-server"
+        "notshekhar/init-express": "bin/init-express",
+        "init-express": "bin/init-express"
     },
-    "main": "src/index.js",
+    "main": "src/cli.js",
     "author": "notshekhar",
     "license": "ISC",
     "dependencies": {
-        "chalk": "^4.1.0",
         "esm": "^3.2.25",
         "inquirer": "^7.3.3",
         "ncp": "^2.0.0"
